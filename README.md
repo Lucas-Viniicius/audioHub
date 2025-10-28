@@ -1,19 +1,30 @@
-# AudioHub 🎵🎙️
+# 🎧 AudioHub
 
-AudioHub é uma aplicação Java orientada a objetos (POO) que simula a reprodução e interação com conteúdos de áudio, incluindo músicas e podcasts.  
-O projeto permite que o usuário reproduza, curta e acompanhe a classificação dos áudios de forma interativa via terminal.
+**AudioHub** é um projeto em **Java** desenvolvido com **Programação Orientada a Objetos (POO)**, que simula um sistema simples de reprodução e interação com **músicas** e **podcasts**.  
+**Obs:** futuramente, planejo adicionar mais tipos de **áudios**.  
 
----
-
-## Tecnologias utilizadas:
-
-- Java 21
-- Programação Orientada a Objetos (POO)
-- Scanner para interação com o usuário no console
+O projeto foi criado com o objetivo de praticar conceitos como **herança**, **encapsulamento**, **polimorfismo** e **métodos personalizados**.  
 
 ---
 
-## Funcionalidades até o momento:
+## 🚀 Funcionalidades
 
-  - reproduzir() → simula a reprodução do áudio
-  - curtir() → incrementa o número de curtidas
+- 🎵 **Reproduzir Áudios**: o usuário pode escolher se deseja reproduzir uma música ou podcast.  
+- 👍 **Curtir Conteúdo**: opção para curtir o título atual.  
+- ⭐ **Favoritar Músicas**: marca uma música como favorita.  
+- 📊 **Classificar Áudios**: mostra a classificação do áudio com base em curtidas e reproduções.  
+- 🧾 **Exibir Dados do Título**: exibe as informações detalhadas de um áudio específico.  
+
+---
+
+## 💭 Observação
+
+- Algumas partes do código (como os blocos **if** e **else** que estão soltos no **main**) poderiam estar em métodos específicos, mas foram mantidas propositalmente para que o **main** não ficasse muito vazio e para facilitar os testes durante o desenvolvimento.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- ☕ **Java**
+- 💡 **Programação Orientada a Objetos (POO)**
+- 🖥️ **Terminal / Scanner para entrada de dados**

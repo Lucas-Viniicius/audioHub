@@ -4,11 +4,17 @@ import java.util.Scanner;
 
 import audioHub.modelos.*;
 
+import audioHub.modelos.Classificacao;;
+
 public class MainAudioHub {
 
     static void limparTela(){
         System.out.print("\033[H\033[2J"); // Limpar a tela
         System.out.flush();
+    }
+
+    static void pularLinha(){
+        System.out.println(" ");
     }
     
     public static void main(String[]args){
@@ -24,18 +30,24 @@ public class MainAudioHub {
         String opcao01m = input.nextLine();
         if(opcao01m.equalsIgnoreCase("sim")){
             musica01.reproduzir();
+        }else{
+            limparTela();
         }
 
         System.out.print("\nDeseja curtir a música: "+musica01.getTitulo()+" ? ");
         String opcao02m = input.nextLine();
         if(opcao02m.equalsIgnoreCase("sim")){
             musica01.curtir();
+        }else{
+            limparTela();
         }
+
+        musica01.tornarFavorita();
 
 
         // PODCASTs:
         Podcast podcast01 = new Podcast();
-        podcast01.setTitulo("PodPah Weslwy Alemão");
+        podcast01.setTitulo("PodPah: Wesley Alemão");
         podcast01.setDescricao("O próprio weslwy alemão, fala sobre a história dele: De como ele conseguiu vencer na vida.");
         podcast01.setNomeDosConvidados("Weslwy Alemão, Igão e Mítico");
         podcast01.setTema("Perguntas sobre a história do vonidado");
@@ -44,15 +56,39 @@ public class MainAudioHub {
         String opcao01p = input.nextLine();
         if(opcao01p.equalsIgnoreCase("sim")){
             podcast01.reproduzir();
+        }else{
+            limparTela();
         }
 
         System.out.print("\nDeseja curtir o podcast: "+podcast01.getTitulo()+" ? ");
         String opcao02p = input.nextLine();
         if(opcao02p.equalsIgnoreCase("sim")){
             podcast01.curtir();
+        }else{
+            limparTela();
         }
 
+        //CLASSIFICAÕES:
+        Classificacao classificacao = new Classificacao();
         
-        System.out.println("Obrigado por acessar nossos serviços!!");
+        System.out.print("Deseja ver os dados da música: "+musica01.getTitulo()+" ? ");
+        String opcao03m = input.nextLine();
+        if(opcao03m.equalsIgnoreCase("sim")){
+            musica01.exibirDadosDoTitulo();
+            classificacao.mostrarClassificacao(musica01);
+        }else{
+            limparTela();
+        }
+
+        System.out.print("\nDeseja ver os dados do podcast: "+podcast01.getTitulo()+" ? ");
+        String opcao03p = input.nextLine();
+        if(opcao03p.equalsIgnoreCase("sim")){
+            podcast01.exibirDadosDoTitulo();
+            classificacao.mostrarClassificacao(podcast01);
+        }else{
+            limparTela();
+        }
+
+        pularLinha();
     }
 }

@@ -31,14 +31,9 @@ public class Podcast extends Audio {
     public void curtir(){
         while(true){
             this.curtidas++;
-            this.classificacao++;
+            this.interacoes++;
 
-            System.out.println("\nPodCast: "+this.titulo+" curtido com sucesso! +1✅");
-            if(this.quantidadeReproducoes > 1){
-                System.out.println("O podcast: "+this.titulo+", tem "+this.curtidas+" curtida(s)");                
-            }else{
-               System.out.println("O podcast: "+this.titulo+", tem "+this.curtidas+" curtida"); 
-            }
+            System.out.println("PodCast: "+this.titulo+", foi curtido com sucesso! +1✅");
 
             System.out.print("\nDeseja curtir: "+this.titulo+", novamente ? ");
             String opcao02 = input.nextLine();
@@ -47,5 +42,23 @@ public class Podcast extends Audio {
                 break;
             }          
         }
+    }
+
+    @Override
+    public int classificar(){
+        if(this.interacoes >= 500){
+            return 10;
+        }else if(this.interacoes >= 250 && this.interacoes < 500){
+            return 8;
+        }else{
+            return 5;
+        }
+    }
+
+    @Override
+    public void exibirDadosDoTitulo(){
+        super.exibirDadosDoTitulo();
+        System.out.println("Nome dos convidados: "+this.nomeDosConvidados);
+        System.out.println("Descrição: "+this.descricao);
     }
 }
