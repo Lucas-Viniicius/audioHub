@@ -19,7 +19,7 @@ O projeto foi criado com o objetivo de praticar conceitos como **herança**, **e
 
 ## 💭 Observação
 
-- Algumas partes do código (como os blocos **if** e **else** que estão soltos no **main**) poderiam estar em métodos específicos, mas foram mantidas propositalmente para que o **main** não ficasse muito vazio e para facilitar os testes durante o desenvolvimento.
+- Algumas partes do código (como os blocos **if** e **else** que estão soltos no **main**) poderiam estar em métodos específicos, mas foram mantidas propositalmente para facilitar os testes durante o desenvolvimento.
 
 ---
 
